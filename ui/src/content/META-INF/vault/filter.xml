@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/cq"/>
+    <filter root="/apps/wcm/core"/>
+    <filter root="/apps/settings"/>
+    <filter root="/apps/ooyala">
+        <exclude pattern="/apps/ooyala/install(/.*)?"/>
+        <exclude pattern="/apps/ooyala/configuration"/>
+    </filter>
+    <filter root="/etc/ooyala"/>
+    <filter root="/etc/map/ooyala_progress_map"/>
+    <filter root="/home/users/system/ooyala-system-user"/>
+    <filter root="/home/groups/o/ooyala-system-users"/>
+</workspaceFilter>

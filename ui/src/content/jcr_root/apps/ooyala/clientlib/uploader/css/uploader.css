@@ -1,0 +1,50 @@
+.uploaderItemsContainer {
+    width: 50%;
+    margin: 10px auto 0;
+}
+
+#selectAsset {
+    overflow: hidden;
+}
+
+#selectAsset.coral-Button--warning:focus {
+    box-shadow: 0 0 0.1875rem #e14132;
+}
+
+
+/* Progress */
+#uploadButtonWrapper {
+    float: right;
+    position: relative;
+}
+
+#uploadProgress {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    min-width: auto;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+#uploadButton {
+    width: 100px;
+    position: relative;
+}
+
+#uploadButtonWrapper.upload #uploadProgress {
+    bottom: -10px;
+    opacity: 1;
+}
+
+#uploadButtonWrapper.complete #uploadProgress,
+#uploadButtonWrapper.error #uploadProgress {
+    bottom: 0px;
+    opacity: 0;
+    transition: all 0.4s 0.5s;
+}
+
+#alert {
+    display: block;
+}

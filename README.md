@@ -2,7 +2,7 @@ Warning
 =========================
 
 <dl>
-    <dt>Current plugin version is compatible with AEM 6.3 only. Please refer to separate branch https://github.com/ooyala/OoyalaAEM/tree/6_2_compatibility to get AEM 6.2 compatible plugin version.</dt>
+    <dt>Current plugin version is compatible with AEM 6.2 only. Please refer to master branch https://github.com/ooyala/OoyalaAEM/tree/master to get AEM 6.3 compatible plugin version.</dt>
 </dl>
 
 Ooyala Adobe AEM Connector
@@ -10,7 +10,7 @@ Ooyala Adobe AEM Connector
 
 <dl>
 	<dt>Compatibility</dt>
-	<dd>Adobe AEM 6.3</dd>
+	<dd>Adobe AEM 6.2</dd>
 
 	<dt>Usage</dt>
 	<dd>A pre built package is available through github by clicking the download link above. Install the zip file into AEMs package manager. Configuration instructions are available in documentation/Ooyala-AdobeAEM-Documentation.pdf</dd>
@@ -22,7 +22,7 @@ Building from Source
 
 <dl>
 	<dt>Requirements</dt>
-	<dd>Maven, Adobe AEM 6.3</dd>
+	<dd>Maven, Adobe AEM 6.2</dd>
 
 	<dt>Build</dt>
 	<dd>Clone the repository. Execute `mvn install` in the parent directory (OoyalaAEM). A full content-package zip can be found under deploy/target.</dd>

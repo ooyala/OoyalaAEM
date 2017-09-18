@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.ooyala.aem</groupId>
+		<artifactId>ooyala-parent</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>ooyala-ui</artifactId>
+	<packaging>content-package</packaging>
+
+	<name>Ooyala Adobe AEM Connector UI</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-content-resources</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/vault-work</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/src/content</directory>
+									<filtering>true</filtering>
+									<excludes>
+										<exclude>**/.svn</exclude>
+										<exclude>**/.vlt</exclude>
+										<exclude>**/.vltignore</exclude>
+										<exclude>**/.DS_Store</exclude>
+										<exclude>**/*.class</exclude>
+										<exclude>**/*.smap</exclude>
+										<exclude>**/*.class/*</exclude>
+										<exclude>jcr_root/libs/**</exclude>
+									</excludes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.day.jcr.vault</groupId>
+				<artifactId>maven-vault-plugin</artifactId>
+				<extensions>true</extensions>
+                <configuration>
+                    <properties>
+                        <acHandling>merge</acHandling>
+                    </properties>
+                </configuration>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.apache.sling
+										</groupId>
+										<artifactId>
+											maven-jspc-plugin
+										</artifactId>
+										<versionRange>
+											[2.0.6,)
+										</versionRange>
+										<goals>
+											<goal>jspc</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

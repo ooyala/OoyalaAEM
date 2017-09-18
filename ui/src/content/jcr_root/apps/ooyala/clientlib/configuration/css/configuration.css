@@ -1,0 +1,13 @@
+.configurationItemsContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#submitButton {
+    float: right;
+    min-width: 100px;
+}
+
+coral-multifield-item-content > input.coral-Textfield {
+    width: 100%;
+}

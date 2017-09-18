@@ -1,0 +1,26 @@
+.autocompleteFieldWrapper {
+    display: block;
+}
+
+.autocompleteFieldWrapper.hidden {
+    display: none !important;
+}
+
+.playlistIconWrapper {
+    height: 100px;
+    text-align: center;
+}
+.playlistIconWrapper:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+}
+.playlistIconWrapper coral-icon {
+    vertical-align: middle;
+}
+
+.overlay-hidden + coral-overlay {
+    display: none;
+}
